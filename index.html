@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="BOS Services intervient à Saint-Paul-lès-Dax et dans un rayon de 30 km pour vos travaux de plomberie, recherche de fuite, débouchage, électricité, climatisation, dépannage et rénovation.">
+  <title>BOS Services | Plombier, Électricien et Climatisation à Saint-Paul-lès-Dax</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f8ff;
+      color: #071529;
+    }
+
+    .topbar {
+      background: #020b16;
+      color: white;
+      padding: 10px 8%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    header {
+      background: white;
+      padding: 18px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    header img {
+      width: 220px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #071529;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #0066ff, #00b7ff);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .hero {
+      min-height: 620px;
+      padding: 80px 8%;
+      background:
+        radial-gradient(circle at top right, rgba(0,102,255,0.35), transparent 30%),
+        linear-gradient(135deg, #020b16, #071529 70%, #003b73);
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      line-height: 1.05;
+      margin: 20px 0;
+    }
+
+    .hero h1 span {
+      color: #228cff;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    .hero-gallery{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.hero-gallery img{
+    width:280px;
+    height:500px;
+    object-fit:cover;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.2);
+    transition:0.4s;
+}
+
+.hero-gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,102,255,0.4);
+}
+
+    section {
+      padding: 70px 8%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 45px;
+      color: #071529;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service {
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .service h3 {
+      color: #0066ff;
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+
+    .service li {
+      margin: 10px 0;
+    }
+
+    .dark {
+      background: linear-gradient(135deg, #020b16, #071529);
+      color: white;
+    }
+
+    .dark h2 {
+      color: white;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    position: relative;
+   }
+
+   .gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(0,102,255,0.35);
+    z-index: 100;
+  }
+
+    .about, .zone {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      line-height: 1.8;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .contact {
+      background:
+        radial-gradient(circle at right, rgba(0,102,255,0.35), transparent 35%),
+        linear-gradient(135deg, #020b16, #003b73);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact-box {
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 2;
+    }
+
+    .contact-box a {
+      color: white;
+      text-decoration: none;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 35px auto 0;
+      display: grid;
+      gap: 15px;
+    }
+
+    input, select, textarea {
+      padding: 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 16px;
+      background: #0066ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #020b16;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .cards, .services, .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      header img {
+        width: 170px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .topbar {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+.camion-parallax {
+    height: 700px;
+    background-image: url("camion-bos.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.camion-parallax::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(2,11,22,0.55);
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.overlay h2 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.overlay p {
+    font-size: 22px;
+    max-width: 800px;
+    line-height: 1.7;
+}
+
+@media(max-width:900px) {
+  .realisations-hero,
+  .avant-apres-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .realisations-hero h2 {
+    font-size: 42px;
+  }
+
+  .realisation-heading{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    min-height:90px;
+}
+
+  .image-compare img {
+    height: 320px;
+  }
+}
+.realisations-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(650px,1fr));
+    gap:50px;
+    max-width:1600px;
+    margin:auto;
+}
+
+@media(max-width:1200px){
+    .realisations-grid{
+        grid-template-columns:1fr;
+    }
+}
+.realisations-grid {
+  align-items: stretch;
+}
+
+.realisation-bloc{
+    background:linear-gradient(135deg, #0a1f44, #123b8b);
+    border-radius:20px;
+
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,102,255,0.25);
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:760px;
+}
+
+.realisation-heading h3{
+    margin:0;
+    font-size:22px;
+}
+
+.realisation-heading p{
+    margin-top:5px;
+}
+
+.avant-apres-grid {
+  margin-top: 10px;
+}
+
+.image-compare img {
+  height: 420px;
+  object-fit: cover;
+}
+
+.texte-realisation,
+.description {
+  min-height: 70px;
+  margin-top: 25px;
+}
+.realisations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+  max-width: 1700px;
+  margin: auto;
+}
+
+.realisation-bloc {
+  background: white;
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.18);
+}
+
+.realisation-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 90px;
+}
+
+.icon-realisation {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #0066ff, #00b7ff);
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.avant-apres-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.image-compare {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-compare img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+}
+
+.label-avant,
+.label-apres {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.label-avant {
+  background: rgba(0,0,0,0.85);
+}
+
+.label-apres {
+  background: #0066ff;
+}
+
+.texte-realisation {
+  margin-top: 24px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #071529;
+}
+
+@media(max-width:1200px) {
+  .realisations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div>☎ 06.25.57.99.78 &nbsp;&nbsp; ✉ bos.services40@gmail.com</div>
+    <div>📍 Saint-Paul-lès-Dax et 30 km autour</div>
+  </div>
+
+  <header>
+    <img src="logo.png" alt="BOS Services">
+    <nav>
+  <a href="#accueil">Accueil</a>
+  <a href="#services">Services</a>
+  <a href="#realisations">Réalisations</a>
+  <a href="#apropos">À propos</a>
+  <a href="#contact">Contact</a>
+</nav>
+    <a class="btn" href="#contact">Demande de devis</a>
+  </header>
+
+  <section class="hero" id="accueil">
+    <div>
+      <p>PLOMBERIE • ÉLECTRICITÉ • CLIMATISATION</p>
+      <h1>Des solutions <span>fiables & durables</span> pour votre confort</h1>
+      <p>
+        BOS Services intervient pour vos dépannages, installations, rénovations,
+        travaux de plomberie, électricité et pose de climatisation.
+      </p>
+      <br>
+      <a class="btn" href="#contact">Demander un devis</a>
+    </div>
+
+    <div class="hero-gallery">
+    <img src="realisation2.jpg">
+    <img src="realisation8.jpg">
+</div>
+  </section>
+
+  <section>
+    <div class="cards">
+      <div class="card"><h3>Intervention rapide</h3><p>Réactivité et sérieux.</p></div>
+      <div class="card"><h3>Travail soigné</h3><p>Finitions propres.</p></div>
+      <div class="card"><h3>Demande de devis</h3><p>Étude claire du besoin.</p></div>
+      <div class="card"><h3>30 km autour</h3><p>Saint-Paul-lès-Dax et alentours.</p></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Nos services</h2>
+
+    <div class="services">
+      <div class="service">
+        <h3>Plomberie</h3>
+        <ul>
+          <li>Recherche et réparation de fuites</li>
+          <li>Installation sanitaire</li>
+          <li>Remplacement de robinetterie</li>
+          <li>Chauffe-eau et ballon d’eau chaude</li>
+          <li>Dépannage plomberie</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <h3>Électricité</h3>
+        <ul>
+          <li>Mise aux normes</li>
+          <li>Tableaux électriques</li>
+          <li>Prises et interrupteurs</li>
+          <li>Éclairage intérieur et extérieur</li>
+          <li>Dépannage électrique</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <h3>Climatisation</h3>
+        <ul>
+          <li>Pose de climatisation réversible</li>
+          <li>Remplacement d’équipements</li>
+          <li>Entretien et maintenance</li>
+          <li>Diagnostic de panne</li>
+          <li>Conseil en performance énergétique</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+ <section class="realisations-premium" id="realisations">
+
+  <h2 class="titre-realisations">Nos réalisations</h2>
+
+  <div class="realisations-grid">
+
+    <div class="realisation-bloc">
+      <div class="realisation-heading">
+        <div class="icon-realisation">⚡</div>
+        <div>
+          <h3>Installation plancher chauffant</h3>
+          <p>Pose d’un système de chauffage au sol électrique</p>
+        </div>
+      </div>
+
+      <div class="avant-apres-grid">
+        <div class="image-compare">
+          <span class="label-avant">PENDANT</span>
+          <img src="avant1.jpg" alt="Pendant travaux">
+        </div>
+
+        <div class="image-compare">
+          <span class="label-apres">APRÈS</span>
+          <img src="apres1.jpg" alt="Après travaux">
+        </div>
+      </div>
+
+      <p class="texte-realisation">
+        Installation complète d’un plancher chauffant électrique pour un confort optimal
+        et une meilleure performance énergétique.
+      </p>
+    </div>
+
+    <div class="realisation-bloc">
+      <div class="realisation-heading">
+        <div class="icon-realisation">🛠️</div>
+        <div>
+          <h3>Création complète d’une salle de bain</h3>
+          <p>Douche, WC, plomberie, électricité et sanitaires</p>
+        </div>
+      </div>
+
+      <div class="avant-apres-grid">
+        <div class="image-compare">
+          <span class="label-avant">PENDANT</span>
+          <img src="avant2.jpg" alt="Pendant travaux">
+        </div>
+
+        <div class="image-compare">
+          <span class="label-apres">APRÈS</span>
+          <img src="apres2.jpg" alt="Après travaux">
+        </div>
+      </div>
+
+      <p class="texte-realisation">
+        Installation de la plomberie, de l’électricité, de la douche, du WC
+        et des équipements sanitaires.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+  <section id="apropos">
+    <h2>À propos</h2>
+    <div class="about">
+      <p>
+        BOS Services accompagne particuliers et professionnels dans leurs travaux
+        de plomberie, d’électricité et de climatisation,depuis prêt de 10 ans. L’objectif est simple :
+        proposer un travail propre, fiable et adapté à chaque besoin.
+
+	BOS Services est spécialisé dans la plomberie, la recherche de fuite, le débouchage de canalisations, l'installation sanitaire, l'électricité générale, la pose de     	climatisation réversible, l'entretien et le dépannage de climatisation à Saint-Paul-lès-Dax et ses alentours.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="camion-parallax">
+    <div class="overlay">
+        <h2>Une entreprise de proximité</h2>
+        <p>
+            BOS Services intervient à Saint-Paul-lès-Dax et dans un rayon de 30 km
+            pour tous vos besoins en plomberie, électricité et climatisation.
+        </p>
+    </div>
+</section>
+
+    <section class="contact" id="contact">
+    <h2>Contact</h2>
+
+    <div class="contact-box">
+      <p>☎ <a href="tel:0625579978">06.25.57.99.78</a></p>
+      <p>✉ <a href="mailto:bos.services40@gmail.com">bos.services40@gmail.com</a></p>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Nom et prénom">
+      <input type="tel" placeholder="Téléphone">
+      <input type="email" placeholder="Adresse e-mail">
+      <select>
+        <option>Type de demande</option>
+        <option>Plomberie</option>
+        <option>Électricité</option>
+        <option>Climatisation</option>
+        <option>Autre</option>
+      </select>
+      <textarea rows="5" placeholder="Décrivez votre besoin"></textarea>
+      <button type="submit">Envoyer ma demande</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 BOS Services - Plomberie • Électricité • Climatisation</p>
+    <p>Saint-Paul-lès-Dax et 30 km autour</p>
+  </footer>
+
+</body>
+</html>
