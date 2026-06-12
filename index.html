@@ -94,15 +94,25 @@
     display:flex;
     justify-content:center;
     gap:25px;
+    align-items:center;
 }
 
 .hero-gallery img{
-    width:280px;
     height:500px;
     object-fit:cover;
     border-radius:20px;
     border:1px solid rgba(255,255,255,0.2);
     transition:0.4s;
+}
+
+/* Salle de bain */
+.hero-gallery img:first-child{
+    width:420px;
+}
+
+/* Plomberie */
+.hero-gallery img:last-child{
+    width:300px;
 }
 
 .hero-gallery img:hover{
