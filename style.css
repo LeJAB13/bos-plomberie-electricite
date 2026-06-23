@@ -689,6 +689,71 @@ footer {
   font-size: 16px;
   color: #dbeafe;
 }
+
+.contact-two-columns {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 35px;
+  padding: 80px 8%;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+  border: 1px solid #e2e8f0;
+}
+
+.contact-identity {
+  text-align: center;
+}
+
+.contact-identity img {
+  width: 260px;
+  margin-bottom: 25px;
+}
+
+.contact-identity h2 {
+  margin-bottom: 5px;
+}
+
+.contact-role {
+  color: #0066ff;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.contact-details {
+  background: #f4f8ff;
+  border-radius: 18px;
+  padding: 25px;
+  line-height: 2;
+  font-size: 18px;
+}
+
+.contact-details a {
+  color: #0066ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-card form {
+  max-width: none;
+  margin-top: 25px;
+}
+
+@media(max-width:900px) {
+  .contact-two-columns {
+    grid-template-columns: 1fr;
+    padding: 50px 6%;
+  }
+
+  .contact-identity img {
+    width: 200px;
+  }
+}
+
 /* RESPONSIVE TABLETTE / MOBILE */
 
 @media (max-width: 1024px) {
