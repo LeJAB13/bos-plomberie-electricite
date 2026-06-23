@@ -1,16 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réalisations - BOS Services</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Réalisations | BOS Services</title>
+  <meta name="description" content="Découvrez les réalisations de BOS Services en plomberie, électricité et climatisation autour de Saint-Paul-lès-Dax.">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="topbar">
   <div>☎ 06.25.57.99.78 &nbsp;&nbsp; ✉ bos.services40@gmail.com</div>
-  <div>📍 Saint-Paul-lès-Dax et 30 km autour</div>
+  <div>📍 Saint-Paul-lès-Dax et 50 km autour</div>
 </div>
 
 <header>
@@ -24,60 +25,97 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <a class="btn" href="contact.html">Devis gratuit</a>
+  <a class="btn" href="contact.html">Demande de devis</a>
 </header>
 
-<section class="hero">
-  <div>
-    <p>NOS RÉALISATIONS</p>
-    <h1>Avant <span>/ Après</span></h1>
-    <p>
-      Découvrez quelques exemples de réalisations effectuées par BOS Services.
-    </p>
-  </div>
-</section>
+<main class="page-realisations">
 
-<section class="avant-apres">
+  <section class="realisations-hero-full">
+    <p>PLOMBERIE • ÉLECTRICITÉ • CLIMATISATION</p>
+    <h1>Nos réalisations</h1>
+    <span>Découvrez quelques exemples de travaux réalisés par BOS Services.</span>
+  </section>
 
-  <h2>Nos réalisations</h2>
+  <section class="realisation-content">
 
-  <div class="realisation-card">
-
-    <div class="realisation-title">
-      <div class="icon">⚡</div>
-      <div>
-        <h3>Rénovation d’une pièce — Installation au sol</h3>
-        <p>Pose d’un système de chauffage au sol électrique</p>
-      </div>
+    <div class="service-bulle grande-bulle">
+  <div class="service-header">
+    <div class="service-icon">🔧</div>
+    <div>
+      <h2>Plomberie</h2>
+      <p>Photo 1 & 2 : Création d'un circuit d'eau. Photo 3 : Pose d'un diffuseur de douche. Photo 4 : Changement de radiateurs.</p>
     </div>
-
-    <div class="comparaison">
-
-      <div class="photo-box">
-        <span>AVANT</span>
-        <img src="avant1.jpg" alt="Avant travaux">
-      </div>
-
-      <div class="photo-box">
-        <span class="after">APRÈS</span>
-        <img src="apres1.jpg" alt="Après travaux">
-      </div>
-
-    </div>
-
-    <p class="description">
-      Installation complète d’un plancher chauffant électrique pour un confort optimal
-      et une meilleure performance énergétique. Travail propre et soigné du début à la fin.
-    </p>
-
   </div>
 
-</section>
+  <div class="slider-container">
+    <button class="prev" type="button" onclick="moveSlide(this, -1)">❮</button>
+
+    <div class="slider">
+      <img src="IMG_1226.JPG" class="slide active" alt="Réalisation plomberie 1">
+      <img src="IMG_1227.JPG" class="slide" alt="Réalisation plomberie 2">
+      <img src="IMG_1223.JPG" class="slide" alt="Réalisation plomberie 3">
+      <img src="realisation5.JPG" class="slide" alt="Réalisation plomberie 4">
+    </div>
+
+    <button class="next" type="button" onclick="moveSlide(this, 1)">❯</button>
+  </div>
+</div>
+
+<div class="service-bulle grande-bulle">
+  <div class="service-header">
+    <div class="service-icon">⚡</div>
+    <div>
+      <h2>Électricité</h2>
+      <p>Photo 1 : Création d'un tableau électrique. Photo 2 : Remise aux normes d'un tableau électrique.</p>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <button class="prev" type="button" onclick="moveSlide(this, -1)">❮</button>
+
+    <div class="slider">
+      <img src="realisation2.JPG" class="slide active" alt="Réalisation électricité 1">
+      <img src="realisation3.JPG" class="slide" alt="Réalisation électricité 2">
+    </div>
+
+    <button class="next" type="button" onclick="moveSlide(this, 1)">❯</button>
+  </div>
+</div>
+
+  </section>
+
+
+</main>
 
 <footer>
   <p>© 2026 BOS Services - Plomberie • Électricité • Climatisation</p>
-  <p>Saint-Paul-lès-Dax et 30 km autour</p>
+  <p>Saint-Paul-lès-Dax et 50 km autour</p>
 </footer>
+
+<script>
+function moveSlide(button, direction) {
+  const sliderContainer = button.closest('.slider-container');
+  const slides = sliderContainer.querySelectorAll('.slide');
+
+  let currentIndex = 0;
+
+  slides.forEach((slide, index) => {
+    if (slide.classList.contains('active')) {
+      currentIndex = index;
+    }
+  });
+
+  slides[currentIndex].classList.remove('active');
+
+  let newIndex = currentIndex + direction;
+
+  if (newIndex >= slides.length) newIndex = 0;
+  if (newIndex < 0) newIndex = slides.length - 1;
+
+  slides[newIndex].classList.add('active');
+}
+</script>
+
 
 </body>
 </html>
