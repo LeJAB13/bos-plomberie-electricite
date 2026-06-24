@@ -878,3 +878,98 @@ footer {
     font-size: 14px;
   }
 }
+.urgence-box{
+    background:#fff4e5;
+    border:2px solid #ff9800;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.urgence-box h3{
+    color:#ff6b00;
+    margin-bottom:10px;
+}
+
+.urgence-tel{
+    display:inline-block;
+    margin-top:15px;
+    font-size:28px;
+    font-weight:bold;
+    color:#0066ff;
+    text-decoration:none;
+}
+
+.instagram-premium{
+    margin-top:25px;
+}
+
+.instagram-left{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+}
+
+.instagram-logo{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:30px;
+
+    background:linear-gradient(
+        45deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.instagram-left h3{
+    margin-top:25px;
+    font-size:34px;
+    color:#071529;
+}
+
+.instagram-left p{
+    margin-top:15px;
+    font-size:18px;
+    line-height:1.8;
+    color:#64748b;
+}
+
+.instagram-btn-premium{
+    display:inline-block;
+    margin-top:30px;
+
+    padding:18px 35px;
+
+    border-radius:14px;
+    text-decoration:none;
+
+    color:white;
+    font-weight:bold;
+    font-size:18px;
+
+    background:linear-gradient(
+        45deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
+
+    transition:.3s;
+}
+
+.instagram-btn-premium:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(220,39,67,.35);
+}
