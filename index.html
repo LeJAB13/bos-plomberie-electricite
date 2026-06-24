@@ -185,28 +185,38 @@
 </section>
 
     <section class="contact" id="contact">
-    <h2>Contact</h2>
+  <h2>Contact</h2>
 
-    <div class="contact-box">
-      <p>☎ <a href="tel:0625579978">06.25.57.99.78</a></p>
-      <p>✉ <a href="mailto:bos.services40@gmail.com">bos.services40@gmail.com</a></p>
-    </div>
+  <div class="contact-box">
+    <p>☎ <a href="tel:0625579978">06.25.57.99.78</a></p>
+    <p>✉ <a href="mailto:bos.services40@gmail.com">bos.services40@gmail.com</a></p>
+  </div>
 
-    <form>
-      <input type="text" placeholder="Nom et prénom">
-      <input type="tel" placeholder="Téléphone">
-      <input type="email" placeholder="Adresse e-mail">
-      <select>
-        <option>Type de demande</option>
-        <option>Plomberie</option>
-        <option>Électricité</option>
-        <option>Climatisation</option>
-        <option>Autre</option>
-      </select>
-      <textarea rows="5" placeholder="Décrivez votre besoin"></textarea>
-      <button type="submit">Envoyer ma demande</button>
-    </form>
-  </section>
+  <form action="https://formsubmit.co/bos.services40@gmail.com" method="POST">
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nouvelle demande BOS Services">
+
+    <input type="text" name="Nom" placeholder="Nom et prénom" required>
+
+    <input type="tel" name="Téléphone" placeholder="Téléphone" required>
+
+    <input type="email" name="Email" placeholder="Adresse e-mail">
+
+    <select name="Service">
+      <option>Type de demande</option>
+      <option>Plomberie</option>
+      <option>Électricité</option>
+      <option>Climatisation</option>
+      <option>Autre</option>
+    </select>
+
+    <textarea name="Message" rows="5" placeholder="Décrivez votre besoin"></textarea>
+
+    <button type="submit">Envoyer ma demande</button>
+
+  </form>
+</section>
 
   <footer>
     <p>© 2026 BOS Services - Plomberie • Électricité • Climatisation</p>
